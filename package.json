@@ -1,0 +1,23 @@
+{
+  "name": "launchcodechallenge",
+  "version": "1.0.0",
+  "description": "Launchcode Challenge",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davidRamalho/LaunchcodeChallenge.git"
+  },
+  "keywords": [
+    "Wet",
+    "Bat"
+  ],
+  "author": "David Ramalho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/davidRamalho/LaunchcodeChallenge/issues"
+  },
+  "homepage": "https://github.com/davidRamalho/LaunchcodeChallenge#readme"
+}
