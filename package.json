@@ -19,5 +19,11 @@
   "bugs": {
     "url": "https://github.com/davidRamalho/LaunchcodeChallenge/issues"
   },
-  "homepage": "https://github.com/davidRamalho/LaunchcodeChallenge#readme"
+  "homepage": "https://github.com/davidRamalho/LaunchcodeChallenge#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "knex": "^0.21.15",
+    "pg": "^8.5.1"
+  }
 }
