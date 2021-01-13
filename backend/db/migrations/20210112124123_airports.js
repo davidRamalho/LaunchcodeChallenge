@@ -1,7 +1,7 @@
 const { table } = require("../knex");
 
 exports.up = function(knex) {
-  return knex.schema.createTable('airport', function(table) {
+  return knex.schema.createTable('airports', function(table) {
     table.increments();
     table.string('name').notNullable();
     table.string('code').notNullable();
@@ -11,5 +11,5 @@ exports.up = function(knex) {
 };
 
 exports.down = function(knex) {
-  return knex.schema.dropTable('airport');
+  return knex.schema.dropTable('airports');
 };

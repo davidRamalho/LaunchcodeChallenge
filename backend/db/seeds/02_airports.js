@@ -1,9 +1,9 @@
 exports.seed = function(knex) {
   // Deletes ALL existing entries
-  return knex('airport').del()
+  return knex('airports').del()
     .then(function() {
       // Inserts seed entries
-      return knex('airport').insert([
+      return knex('airports').insert([
         { name: 'Hartsfield–Jackson Atlanta International Airport', code: 'ATL', city: 'Atlanta, Georgia', country: 'United States'},
         { name: 'Beijing Capital International Airport', code: 'PEK', city: 'Chaoyang-Shunyi, Beijing', country: 'China'},
         { name: 'Los Angeles International Airport', code: 'LAX', city: 'Los Angeles, California', country: 'United States'},
