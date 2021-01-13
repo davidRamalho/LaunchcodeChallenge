@@ -5,7 +5,7 @@ exports.up = function(knex) {
     table.increments();
     table.string('name').notNullable();
     table.string('email').notNullable();
-    table.string('phone').notNullable();
+    table.string('phone');
   });
 };
 
