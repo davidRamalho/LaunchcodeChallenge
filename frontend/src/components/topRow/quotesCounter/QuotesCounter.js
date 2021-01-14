@@ -1,10 +1,10 @@
 import React from "react";
 import "antd/dist/antd.css";
 import { Row, Col } from 'antd';
-import './TopRow.css';
+import './QuotesCounter.css';
 
 
-function TopRow() {
+function QuotesCounter() {
 
   const style = { padding: '8px 0' };
   const style2 = { padding: '8px 10px' };  
@@ -33,4 +33,4 @@ function TopRow() {
   );
 }
 
-export default TopRow;
+export default QuotesCounter;
