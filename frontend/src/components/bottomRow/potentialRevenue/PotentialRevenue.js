@@ -9,24 +9,31 @@ import {
 
 function PotentialRevenue() {
 
-  const style = { padding: '0px', margin: '0 0 5px'};
+  const style = { padding: '0px', margin: '5px 0 5px'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
     
   return (
-    <Row >
-      <Col span={24} >
-        <div className='title'>
-          <div className='title-left'>
-            <PieChartOutlined  style={iconstyle}/>
-            Potential Revenue
+    <>
+      <Row >
+        <Col span={24} >
+          <div className='title'>
+            <div className='title-left'>
+              <PieChartOutlined  style={iconstyle}/>
+              Potential Revenue
+            </div>
+            <div className='icon-right'>
+              <MoreOutlined style={iconstyle}/>
+            </div>
           </div>
-          <div className='icon-right'>
-            <MoreOutlined style={iconstyle}/>
-          </div>
-        </div>
-      </Col>
+        </Col>
+      </Row>
       <Divider style={style}/>
-    </Row>
+      <Row>
+        <Col span={24}>
+          <img className='pieImg' alt='chart2' src={'/images/PieChart.png'}/>
+        </Col>
+      </Row>
+    </>
   );
 }
 

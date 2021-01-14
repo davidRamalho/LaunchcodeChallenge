@@ -9,24 +9,29 @@ import {
 
 function Revenue() {
 
-  const style = { padding: '0px', margin: '0 0 5px'};
+  const style = { padding: '0px', margin: '5px 0 5px'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
     
   return (
-    <Row >
-      <Col span={24} >
-        <div className='title'>
-          <div className='title-left'>
-            <BarChartOutlined style={iconstyle}/>
-            Revenue
+    <>  
+      <Row >
+        <Col span={24} >
+          <div className='title'>
+            <div className='title-left'>
+              <BarChartOutlined style={iconstyle}/>
+              Revenue
+            </div>
+            <div className='icon-right'>
+              <MoreOutlined  style={iconstyle}/>
+            </div>
           </div>
-          <div className='icon-right'>
-            <MoreOutlined  style={iconstyle}/>
-          </div>
-        </div>
-      </Col>
+        </Col>
+      </Row>
       <Divider style={style}/>
-    </Row>
+      <Col span={24}>
+        <img className='revenueImg' alt='chart' src={'/images/LineChart.png'}/>
+      </Col>
+    </>
   );
 }
 

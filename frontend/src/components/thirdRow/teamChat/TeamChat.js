@@ -10,7 +10,7 @@ import {
 
 function TeamChat () {
 
-  const style = { padding: '0px', margin: '0 0 5px'};
+  const style = { padding: '0px', margin: '5px 0 5px'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
     
   return (
@@ -30,22 +30,22 @@ function TeamChat () {
       </Row>
       <Divider style={style}/>
       <Row justify='end'>
-        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/women/51.jpg'/></Col>
+        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/women/12.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}><MessageFilled style={iconstyle}/></Col>
       </Row>
       <Row justify='end'>
-        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/women/51.jpg'/></Col>
+        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/men/51.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}><MessageFilled style={iconstyle}/></Col>
       </Row>
       <Row justify='end'>
-        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/women/51.jpg'/></Col>
+        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/women/41.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}><MessageFilled style={iconstyle}/></Col>
       </Row>
       <Row justify='end'>
-        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/women/51.jpg'/></Col>
+        <Col span={6}><img className='chatavatar' src='https://randomuser.me/api/portraits/thumb/women/32.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}><MessageFilled style={iconstyle}/></Col>
       </Row>

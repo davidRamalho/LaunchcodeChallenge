@@ -10,7 +10,7 @@ import {
 
 function PendingQuotes () {
 
-  const style = { padding: '0px', margin: '0 0 5px'};
+  const style = { padding: '0px', margin: '5px 0 5px'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
     
   return (

@@ -37,6 +37,7 @@ function App() {
             <Menu.Item key="3" icon={<BellFilled />} />
             <Menu.Item key="4" icon={<WechatFilled />} />
             <Menu.Item key="5" icon={<SettingFilled />} />
+            <img width='35' className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/women/32.jpg'/>
           </Menu>
         </Header>
         <Layout>

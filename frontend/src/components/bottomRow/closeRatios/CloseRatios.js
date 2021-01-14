@@ -9,24 +9,31 @@ import {
 
 function CloseRatios() {
 
-  const style = { padding: '0px', margin: '0 0 5px'};
+  const style = { padding: '0px', margin: '5px 0 5px'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
     
   return (
-    <Row >
-      <Col span={24} >
-        <div className='title'>
-          <div className='title-left'>
-            <LikeOutlined style={iconstyle}/>
-            Close Ratios
+    <>
+      <Row >
+        <Col span={24} >
+          <div className='title'>
+            <div className='title-left'>
+              <LikeOutlined style={iconstyle}/>
+              Close Ratios
+            </div>
+            <div className='icon-right'>
+              <MoreOutlined style={iconstyle}/>
+            </div>
           </div>
-          <div className='icon-right'>
-            <MoreOutlined style={iconstyle}/>
-          </div>
-        </div>
-      </Col>
-      <Divider style={style}/>
-    </Row>
+        </Col>
+        <Divider style={style}/>
+      </Row>
+      <Row>
+        <Col span={24}>
+          <img className='ratioImg' alt='chart3' src={'/images/CloseRatio.png'}/>
+        </Col>
+      </Row>
+    </>
   );
 }
 

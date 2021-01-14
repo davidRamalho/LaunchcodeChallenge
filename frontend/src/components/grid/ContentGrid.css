@@ -53,3 +53,30 @@
   margin-top: 1em;
   margin-bottom: 1em;
 }
+.revenueImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 41%;
+}
+.ratioImg {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 43.35%;
+}
+.pieImg {
+  width: 100%
+}
+.bar{
+  display: flex;
+  flex-direction: row;
+  margin-left: 1em;
+}
+.bartext {
+  font-size: 0.85em;
+  margin-right: 1em;
+}
+.destinations {
+  width: 100%;
+}
