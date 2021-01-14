@@ -1,47 +1,51 @@
 import React from 'react';
-import { Row, Col, Divider } from 'antd';
+import './ContentGrid.css';
+import { Row, Col } from 'antd';
+import TopRow from '../topRow/TopRow'
 
-const style = { background: '#0092ff', padding: '8px 0' };
+const style = { padding: '8px 0' };
+
 
 const ContentGrid = () => {
  
   return (
     <>
-      <Row gutter={16}>
+      <Row gutter={[16, 16]}>
         <Col className="gutter-row" span={24}>
-          <div style={style}>col-6</div>
+          <TopRow/>
         </Col>
       </Row>
-      <Divider orientation="left">Responsive</Divider>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
+      
+      <Row gutter={[16, 16]}>
         <Col className="gutter-row" span={8}>
-          <div style={style}>col-8</div>
+          <div style={style}>QUICK QUOTE</div>
         </Col>
         <Col className="gutter-row" span={8}>
-          <div style={style}>col-8</div>
+          <div style={style}>PENDING QUOTES</div>
         </Col>
         <Col className="gutter-row" span={8}>
-          <div style={style}>col-6</div>
-        </Col>
-      </Row>
-      <Divider orientation="left">Responsive</Divider>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        <Col className="gutter-row" span={16}>          <div style={style}>col-8</div>
-        </Col>
-        <Col className="gutter-row" span={8}>
-          <div style={style}>col-8</div>
+          <div style={style}>NEW LEADS</div>
         </Col>
       </Row>
-      <Divider orientation="left">Vertical</Divider>
-      <Row gutter={{ xs: 8, sm: 16, md: 24, lg: 32 }}>
-        <Col className="gutter-row" span={8}>
-          <div style={style}>col-8</div>
+      
+      <Row gutter={[16, 16]}>
+        <Col className="gutter-row" span={16}> 
+          <div style={style}>POPULAR DESTINATIONS AND PACKAGES</div>
         </Col>
         <Col className="gutter-row" span={8}>
-          <div style={style}>col-8</div>
+          <div style={style}>TEAM CHAT</div>
+        </Col>
+      </Row>
+      
+      <Row gutter={[16, 16]}>
+        <Col className="gutter-row" span={8}>
+          <div style={style}>REVENUE</div>
         </Col>
         <Col className="gutter-row" span={8}>
-          <div style={style}>col-6</div>
+          <div style={style}>POTENTIAL REVENUE</div>
+        </Col>
+        <Col className="gutter-row" span={8}>
+          <div style={style}>CLOSE RATIOS</div>
         </Col>
       </Row>
     </>

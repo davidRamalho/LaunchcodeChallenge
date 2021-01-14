@@ -1,0 +1,18 @@
+.top {
+  border-radius: 8px ;
+  background-image: linear-gradient(to right, #5BBFBA , #5F6CAF);
+}
+.welcome {
+  color: aliceblue;
+  margin-left: 0.5em;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  font-size: 3em;
+  font-weight: 600;
+}
+.welcome-text {
+  color: aliceblue;
+  margin-left: 1.5em;
+  font-size: 1em;
+  font-weight: 400;
+}
