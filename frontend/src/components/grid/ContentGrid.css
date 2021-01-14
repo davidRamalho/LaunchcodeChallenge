@@ -16,3 +16,40 @@
   font-size: 1em;
   font-weight: 400;
 }
+.grid-items {
+  border-radius: 8px ;
+  background-color: white;
+}
+.title {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.25em;
+  justify-content: space-between;
+  color: #5F6CAF;
+  font-weight: 600;
+}
+.title-left{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-left: 1em;
+}
+.icon-right {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin-right: 0.5em;
+}
+.leadsavatar {
+  border-radius: 25px;
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+.chatavatar {
+  border-radius: 10px;
+  margin-left: 1em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

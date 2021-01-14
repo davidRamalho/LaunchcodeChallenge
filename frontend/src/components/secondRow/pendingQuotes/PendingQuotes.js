@@ -1,26 +1,34 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Row, Col } from 'antd';
+import { Row, Col, Divider } from 'antd';
 import './PendingQuotes.css';
+import {
+  HistoryOutlined,
+  FullscreenOutlined, 
+  UndoOutlined
+} from "@ant-design/icons";
 
 function PendingQuotes () {
 
-  const style = { padding: '8px 0' };
+  const style = { padding: '0px', margin: '0 0 5px'};
+  const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
     
   return (
-    
-    <Row gutter={[16, 16]}>
-      <Col className="quick-quote" span={8}>
-        <div style={style}>QUICK QUOTE</div>
+    <Row >
+      <Col span={24} >
+        <div className='title'>
+          <div className='title-left'>
+            <HistoryOutlined style={iconstyle}/>
+            Pending Quotes
+          </div>
+          <div className='icon-right'>
+            <UndoOutlined  style={iconstyle}/>
+            <FullscreenOutlined  style={iconstyle}/>
+          </div>
+        </div>
       </Col>
-      <Col className="pending-quote" span={8}>
-        <div style={style}>PENDING QUOTES</div>
-      </Col>
-      <Col className="new-leads" span={8}>
-        <div style={style}>NEW LEADS</div>
-      </Col>
+      <Divider style={style}/>
     </Row>
-    
   );
 }
 

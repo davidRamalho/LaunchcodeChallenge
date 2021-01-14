@@ -1,23 +1,31 @@
 import React from "react";
 import "antd/dist/antd.css";
-import { Row, Col } from 'antd';
 import './CloseRatios.css';
+import { Row, Col, Divider } from 'antd';
+import {
+  LikeOutlined,
+  MoreOutlined
+} from "@ant-design/icons";
 
 function CloseRatios() {
 
-  const style = { padding: '8px 0' };
+  const style = { padding: '0px', margin: '0 0 5px'};
+  const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
     
   return (
-    <Row gutter={[16, 16]}>
-      <Col className="gutter-row" span={8}>
-        <div style={style}>REVENUE</div>
+    <Row >
+      <Col span={24} >
+        <div className='title'>
+          <div className='title-left'>
+            <LikeOutlined style={iconstyle}/>
+            Close Ratios
+          </div>
+          <div className='icon-right'>
+            <MoreOutlined style={iconstyle}/>
+          </div>
+        </div>
       </Col>
-      <Col className="gutter-row" span={8}>
-        <div style={style}>POTENTIAL REVENUE</div>
-      </Col>
-      <Col className="gutter-row" span={8}>
-        <div style={style}>CLOSE RATIOS</div>
-      </Col>
+      <Divider style={style}/>
     </Row>
   );
 }

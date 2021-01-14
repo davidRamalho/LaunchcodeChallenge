@@ -13,7 +13,7 @@ import {
   SettingOutlined,
   WhatsAppOutlined,
   BellFilled,
-  FlagFilled,
+  WechatFilled,
   SettingFilled,
 } from "@ant-design/icons";
 import ContentGrid from './components/grid/ContentGrid'
@@ -35,7 +35,7 @@ function App() {
                 style={{ width: 400 }}
             />
             <Menu.Item key="3" icon={<BellFilled />} />
-            <Menu.Item key="4" icon={<FlagFilled />} />
+            <Menu.Item key="4" icon={<WechatFilled />} />
             <Menu.Item key="5" icon={<SettingFilled />} />
           </Menu>
         </Header>

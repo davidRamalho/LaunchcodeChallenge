@@ -6,14 +6,11 @@ import SecondRow from '../secondRow/SecondRow'
 import ThirdRow from '../thirdRow/ThirdRow'
 import BottomRow from '../bottomRow/BottomRow'
 
-const style = { padding: '8px 0' };
-
-
 const ContentGrid = () => {
  
   return (
     <>
-      <Row gutter={[16, 16]}>
+      <Row gutter={[8, 24]}>
         <Col className="gutter-row" span={24}>
           <TopRow/>
         </Col>
