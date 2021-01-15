@@ -19,6 +19,8 @@ If I had more time I would have liked to add some unit testing and to also make 
 - knex migrate:latest
 - knex seed:run
 
+NOTE: The application only runs with PostgreSQL. If you do not have Postgre installed globally, please do that first. 
+
 # Running the Application
 
 Backend Server:
