@@ -19,12 +19,24 @@ const Contact = (props) => {
     setIsModalVisible(true);
   };
 
-  const handleOk = () => {
-    axios.post('/quotes', { fromAirport, destinationAirport, name, email, phone, transportation, departureDate, returnDate, numberOfTravellers})
-    .then(axios.get('/quotes')
+  const getQuotes = () => {
+    axios.get('quotes')
     .then((response) => {
       setQuotes(response.data);
-    }))
+    })
+    .catch((error) => {
+      console.log('Error from getting quotes', error);
+    });
+  };
+
+  const handleOk = () => {
+    axios.post('/quotes', { fromAirport, destinationAirport, name, email, phone, transportation, departureDate, returnDate, numberOfTravellers})
+    .then((response) => {
+      setQuotes(response.data);
+    })
+    setTimeout(() => {
+      getQuotes();
+    }, 75);
     setIsModalVisible(false);
   };
 

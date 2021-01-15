@@ -16,8 +16,7 @@ function PendingQuotes (props) {
   const quoteStyle = { padding: '0px', margin: '0 0 0 1em'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
   const { airports, quotes, setQuotes } = props;
-  console.log(quotes)
-
+  
   const getQuotes = () => {
     axios.get('quotes')
     .then((response) => {
