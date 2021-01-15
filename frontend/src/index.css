@@ -19,5 +19,6 @@ code {
   justify-content: flex-end;
 }
 .headerLogo {
-  margin-right: 50em;
+  position: absolute;
+  left: 4em;
 }
