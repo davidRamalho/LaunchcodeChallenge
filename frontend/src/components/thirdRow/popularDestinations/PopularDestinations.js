@@ -64,7 +64,7 @@ function PopularDestinations () {
           </div>
         </Col>
         <Col span={16}>
-          <img className='destinations' src={'/images/destinations.png'}/>
+          <img alt="destinations" className='destinations' src={'/images/destinations.png'}/>
         </Col>
       </Row>
     </>

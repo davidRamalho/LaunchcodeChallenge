@@ -19,7 +19,7 @@ function TopRow() {
         <Col className="gutter-row" span={12}>
           <Row justify='end' gutter={[0, 16]}>
             <Col className="gutter-row" span={12}>
-              <img width='400' src={'/images/contactus.jpg'}></img>
+              <img className='contact-us-img' width='400' src={'/images/contactus.jpg'}></img>
             </Col>
           </Row>
           <Row justify='end' gutter={[8, 16]}>
