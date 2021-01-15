@@ -25,12 +25,14 @@
 .grid-items {
   border-radius: 8px ;
   background-color: white;
+  overflow: hidden;
 }
 .grid-items-quickQuote {
   min-height: 357px;
   max-height: 357px;
   border-radius: 8px ;
   background-color: white;
+  overflow: hidden;
 }
 .title {
   display: flex;

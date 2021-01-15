@@ -39,13 +39,13 @@ function PendingQuotes (props) {
             <Col style={quoteStyle} span={2}>
               ID#
             </Col>
-            <Col span={5}>
+            <Col span={3}>
               NAME
             </Col>
             <Col span={8}>
               DESTINATION AIRPORT CODE
             </Col>
-            <Col span={6}>
+            <Col span={8}>
               EMAIL
             </Col>
             <Col span={1}>
@@ -59,7 +59,7 @@ function PendingQuotes (props) {
                 <Col style={quoteStyle} span={2}>
                   {quote.id}
                 </Col>
-                <Col span={5}>
+                <Col span={3}>
                   {quote.name}
                 </Col>
                 <Col span={8}>
@@ -69,7 +69,7 @@ function PendingQuotes (props) {
                     }
                   })}
                 </Col>
-                <Col span={6}>
+                <Col span={8}>
                   {quote.email}
                 </Col>
                 <Col span={1}>
