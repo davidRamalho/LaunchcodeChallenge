@@ -1,6 +1,13 @@
 # Launchcode Take Home Test
+# Planning and Project Decisions
 
-This test actually ended up being a lot of fun. If I had more time I would have liked to add some unit testing and to also make the front-end design more responsive and less broken. I also would have expanded the database to include users and allow for user login and logout. In addition I would have added constraints/validation to input data in order to reduce bugs. I also would have deployed the app. 
+When planning on how to tackle the challenge I first did some research on how to go about creating the database to allow for migrations and seeding. I decided to use knex as it seems to be a widely used framework and easy to use. However, I had never used it before, so that ate up some research time. 
+
+While planning the ERD for the databse I used moqups.com. Link: https://app.moqups.com/hVsFCVbeXS/view/page/ad64222d5
+
+I decided to only include 12 airports in the database for ease of use. However, with more time I would have liked to connect the application with a flights API (Google Flights for example), in order to have more realistic data. 
+
+If I had more time I would have liked to add some unit testing and to also make the front-end design more responsive and less broken. I also would have expanded the database to include users and allow for user login and logout. In addition I would have added constraints/validation to input data in order to reduce bugs. I also would have deployed the app. 
 
 # Installing the Application
 
@@ -26,10 +33,6 @@ To run the frontend server first open the directory LaunchcodeChallenge/frontend
 
 - Front-end: React, Axios, Antd, CSS.
 - Back-end: Node, Knex, Express. 
-
-# Wireframe Planning
-
-While planning the frontend for this application I used moqups.com in order to have a clear plan of approach. Link: https://app.moqups.com/hVsFCVbeXS/view/page/ad64222d5
 
 # Contact
 
