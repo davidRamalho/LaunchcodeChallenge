@@ -1,15 +1,19 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
 import "./Contact.css";
-import { Modal, Button, Input } from "antd";
+import { Modal, Button, Input, Row, Col } from "antd";
 import axios from "axios";
+import {
+  EditOutlined 
+} from "@ant-design/icons";
 
 const Contact = (props) => {
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [phone, setPhone] = useState(null);
   const [email, setEmail] = useState(null);
   const { setQuotes, fromAirport, destinationAirport, departureDate, returnDate, numberOfTravellers, name, transportation } = props;
-  
+  const iconstyle = { margin: '0 3px 0 -20px', fontSize: '1.25em' , color: '#5BBFBA'}
+
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -28,13 +32,28 @@ const Contact = (props) => {
     setIsModalVisible(false);
   };
 
+  const header = () => {
+    return (
+      <Row >
+        <Col span={24} >
+          <div className='title'>
+            <div className='title-left'>
+            <EditOutlined style={iconstyle}/>
+              Please Enter Contact Info
+            </div>
+          </div>
+        </Col>
+      </Row>
+    )
+  }
+
   return (
     <>
       <Button type="primary" style={{ background: "#5BBFBA", borderColor: "#5BBFBA" }} shape="round" size='large' onClick={showModal}>
         Create a Quote
       </Button>
       <Modal
-        title="Please Enter Contact Info"
+        title={header()}
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}

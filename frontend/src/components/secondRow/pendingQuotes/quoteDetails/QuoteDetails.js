@@ -3,7 +3,8 @@ import "antd/dist/antd.css";
 import "./QuoteDetails.css";
 import { Modal, Row, Col } from "antd";
 import {
-  FullscreenOutlined 
+  FullscreenOutlined, 
+  UnorderedListOutlined, 
 } from "@ant-design/icons";
 
 const Contact = (props) => {
@@ -24,6 +25,7 @@ const Contact = (props) => {
 
   const displayDepartureDate = departureDate.split('T')[0];
   const displayReturnDate = returnDate.split('T')[0];
+  const iconstyle = { margin: '0 3px 0 -20px', fontSize: '1.25em' , color: '#5BBFBA'}
 
   const showModal = () => {
     setIsModalVisible(true);
@@ -37,11 +39,27 @@ const Contact = (props) => {
     setIsModalVisible(false);
   };
 
+  const header = () => {
+    return (
+      <Row >
+        <Col span={24} >
+          <div className='title'>
+            <div className='title-left'>
+            <UnorderedListOutlined style={iconstyle}/>
+              Quote Details
+            </div>
+          </div>
+        </Col>
+      </Row>
+    )
+  }
+  
+
   return (
     <>
       <FullscreenOutlined type="primary" style={{ background: '#A4D4AE', borderColor: "#5BBFBA" }} onClick={showModal}/>
       <Modal
-        title="Quote Details"
+        title= {header()}
         visible={isModalVisible}
         onOk={handleOk}
         onCancel={handleCancel}
@@ -53,12 +71,22 @@ const Contact = (props) => {
         </Row>
         <Row>
           <Col span={24}>
-            From Airport: {fromAirport}
+            From Airport: 
+            {airports.map(airport => {
+              if (fromAirport === airport.id) {
+                return ' ' + airport.name + ' ' + `(${airport.code})`;
+              }
+            })}
           </Col>
         </Row>
         <Row>
           <Col span={24}>
-            Destination Airport: {destinationAirport}
+            Destination Airport: 
+            {airports.map(airport => {
+              if (destinationAirport === airport.id) {
+                return ' ' + airport.name + ' ' + `(${airport.code})`;
+              }
+            })}
           </Col>
         </Row>
         <Row>
