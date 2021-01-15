@@ -34,7 +34,7 @@ To run the frontend server first open the directory LaunchcodeChallenge/frontend
 # Tech Stack
 
 - Front-end: React, Axios, Antd, CSS.
-- Back-end: Node, Knex, Express. 
+- Back-end: Node, PostgreSQL, Knex, Express. 
 
 # Contact
 
