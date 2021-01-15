@@ -11,10 +11,9 @@ exports.up = function(knex) {
       .references('id')
       .inTable('airports')
       .onDelete('CASCADE');
-    table.integer('user_id')
-      .references('id')
-      .inTable('users')
-      .onDelete('CASCADE');
+    table.string('name').notNullable();
+    table.string('email').notNullable();
+    table.string('phone');
     table.enu('transportation', ['rental car', 'limousine', 'taxi', 'other']).defaultTo('other');
     table.date('departure_date').notNullable();
     table.date('return_date').notNullable();

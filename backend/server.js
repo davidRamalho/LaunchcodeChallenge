@@ -3,7 +3,6 @@ const bodyParser = require('body-parser');
 const port = process.env.PORT || 8000;
 const app = express();
 const airports = require('./api/airports');
-const users = require('./api/users');
 const quotes = require('./api/quotes');
 
 app.use(bodyParser.json());
@@ -14,5 +13,4 @@ app.listen(port, function() {
 });
 
 app.use('/airports', airports);
-app.use('/users', users);
 app.use('/quotes', quotes);

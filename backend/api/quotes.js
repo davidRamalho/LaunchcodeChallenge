@@ -8,4 +8,10 @@ router.get('/', (req, res) => {
   });
 });
 
+router.post('/', (req, res) => {
+  queries.createQuotes(req.body).then(quotes => {
+    res.json(quotes);
+  });
+});
+
 module.exports = router;

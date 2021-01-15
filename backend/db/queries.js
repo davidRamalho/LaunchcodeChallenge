@@ -4,10 +4,10 @@ module.exports = {
   getAllAirports() {
     return knex('airports');
   },
-  getAllUsers() {
-    return knex('users');
-  },
   getAllQuotes() {
     return knex('quotes');
+  },
+  createQuotes(quote) {
+    return knex('quotes').insert(quote, '*');
   }
 };
