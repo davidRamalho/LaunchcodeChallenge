@@ -1,4 +1,4 @@
-import React, { useState }from "react";
+import React from "react";
 import "antd/dist/antd.css";
 import { Row, Col } from 'antd';
 import QuickQuote from './quickQuote/QuickQuote'
