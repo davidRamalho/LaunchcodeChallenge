@@ -1,4 +1,4 @@
-# OPIsystems Take Home Test
+# Launchcode Take Home Test
 
 This test actually ended up being a lot of fun. If I had more time I would have liked to add some unit testing and to also make the front-end design more responsive and less broken. I also would have expanded the database to include users and allow for user login and logout. In addition I would have added constraints/validation to input data in order to reduce bugs. 
 
