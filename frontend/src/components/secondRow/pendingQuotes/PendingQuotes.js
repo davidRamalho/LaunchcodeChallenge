@@ -28,12 +28,12 @@ function PendingQuotes (props) {
     });
   };
   
-  if (quotes === null) {
+  if (quotes.length === 0) {
     getQuotes();
   }
 
   const quotesList = (quotes) => {
-    if (quotes !== null) {
+    if (quotes.length !== 0 ) {
       return (
         <>
           <Row>

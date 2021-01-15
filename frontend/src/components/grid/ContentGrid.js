@@ -6,8 +6,8 @@ import SecondRow from '../secondRow/SecondRow'
 import ThirdRow from '../thirdRow/ThirdRow'
 import BottomRow from '../bottomRow/BottomRow'
 
-const ContentGrid = () => {
- 
+const ContentGrid = (props) => {
+  const { airports, setAirports, quotes, setQuotes } = props
   return (
     <>
       <Row gutter={[8, 24]}>
@@ -16,7 +16,12 @@ const ContentGrid = () => {
         </Col>
       </Row>
       
-      <SecondRow/>
+      <SecondRow 
+        airports={airports}
+        setAirports={setAirports}
+        quotes={quotes}
+        setQuotes = {setQuotes}
+      />
       
       <ThirdRow/>
       

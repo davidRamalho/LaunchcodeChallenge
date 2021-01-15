@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import "antd/dist/antd.css";
 import "./index.css";
 import { Layout, Menu, Select } from "antd";
@@ -17,11 +17,34 @@ import {
   SettingFilled,
 } from "@ant-design/icons";
 import ContentGrid from './components/grid/ContentGrid'
+import QuotesGrid from './components/quotesGrid/QuotesGrid'
 
 const { SubMenu } = Menu;
 const { Header, Content, Sider } = Layout;
 
 function App() {
+  const [isHomeVisible, setHomeVisible] = useState(true);
+  const [isQuotesVisible, setQuotesVisible] = useState(false);
+  const [quotes, setQuotes] = useState([]);
+  const [airports, setAirports] = useState([]);
+
+  const showHome = () => {
+    setHomeVisible(true);
+  };
+
+  const hideHome = () => {
+    setHomeVisible(false);
+  };
+
+  const showQuotes = () => {
+    setQuotesVisible(true);
+    setHomeVisible(false);
+  };
+
+  const hideQuotes = () => {
+    setQuotesVisible(false);
+    setHomeVisible(true);
+  };
   
   return (
     <div className="App">
@@ -49,10 +72,10 @@ function App() {
               style={{ height: "100%", borderRight: 0 }}
             >
               <SubMenu key="sub1" title="Menu">
-                <Menu.Item key="1" icon={<HomeOutlined />}>
+                <Menu.Item onSelect = {showHome} onDeselect={hideHome} onClick={showHome} key="1" icon={<HomeOutlined />}>
                   Home
                 </Menu.Item>
-                <Menu.Item key="2" icon={<DollarCircleOutlined />}>
+                <Menu.Item onSelect = {showQuotes} onDeselect={hideQuotes} onClick={showQuotes} key="2" icon={<DollarCircleOutlined />}>
                   Quotes
                 </Menu.Item>
                 <Menu.Item key="3" icon={<UnorderedListOutlined />}>
@@ -87,8 +110,24 @@ function App() {
                 margin: 0,
                 minHeight: 900
               }}
-            >
-              <ContentGrid/>
+            >{ isHomeVisible 
+              ? <ContentGrid
+                  airports={airports}
+                  setAirports={setAirports}
+                  quotes={quotes}
+                  setQuotes = {setQuotes}
+              />
+              : isQuotesVisible 
+              ? <div className='grid-items'>
+                  <QuotesGrid
+                    airports={airports}
+                    setAirports={setAirports}
+                    quotes={quotes}
+                    setQuotes = {setQuotes}
+                  />
+                </div>
+              : <ContentGrid/>
+            }
             </Content>
           </Layout>
         </Layout>

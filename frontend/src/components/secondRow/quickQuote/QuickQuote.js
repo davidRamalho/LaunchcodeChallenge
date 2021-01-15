@@ -14,6 +14,7 @@ function QuickQuote (props) {
   const style = { padding: '0px', margin: '5px 0 5px'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
   const searchStyle = { margin: '0 0 0 12px'}
+  const searchStyleTop = { margin: '20px 0 0 12px'}
   const [fromAirport, setFromAirport] = useState('');
   const [destinationAirport, setDestinationAirport] = useState('');
   const [departureDate, setDepartureDate] = useState('');
@@ -33,12 +34,12 @@ function QuickQuote (props) {
     });
   };
   
-  if (airports === null) {
+  if (airports.length === 0) {
     getAirports();
   }
   
   const airportOptions = (airports) => {
-    if (airports !== null) {
+    if (airports.length !== 0) {
       return (
         <>
           {airports.map(airport => (
@@ -66,7 +67,7 @@ function QuickQuote (props) {
         <Divider style={style}/>
       </Row>
       <Row gutter={[42, 24]}>
-        <Col span={10} style={searchStyle}>
+        <Col span={10} style={searchStyleTop}>
           <Select
             showSearch
             style={{ width: 200 }}
@@ -80,7 +81,7 @@ function QuickQuote (props) {
             {airportOptions(airports)}
           </Select>
         </Col>
-        <Col span={10} style={searchStyle}>
+        <Col span={10} style={searchStyleTop}>
           <Select
             showSearch
             style={{ width: 200 }}

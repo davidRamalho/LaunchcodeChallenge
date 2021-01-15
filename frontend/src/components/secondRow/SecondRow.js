@@ -6,16 +6,15 @@ import PendingQuotes from './pendingQuotes/PendingQuotes'
 import NewLeads from './newLeads/NewLeads'
 import './SecondRow.css';
 
-function SecondRow () {
-  const [quotes, setQuotes] = useState(null);
-  const [airports, setAirports] = useState(null);
+function SecondRow (props) {
+  const { airports, setAirports, quotes, setQuotes } = props;
   const style = { background: "white", padding: '8px 0' };
     
   return (
     
     <Row gutter={[16, 16]} >
       <Col span={8}>
-        <div className='grid-items' style={style}>
+        <div className='grid-items-quickQuote' style={style}>
           <QuickQuote 
             airports = {airports}
             setAirports = {setAirports}
@@ -24,7 +23,7 @@ function SecondRow () {
         </div>
       </Col>
       <Col span={8}>
-        <div className='grid-items' style={style}>
+        <div className='grid-items-quickQuote' style={style}>
           <PendingQuotes
             airports = {airports}
             setQuotes={setQuotes}

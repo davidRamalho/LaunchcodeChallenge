@@ -26,6 +26,12 @@
   border-radius: 8px ;
   background-color: white;
 }
+.grid-items-quickQuote {
+  min-height: 357px;
+  max-height: 357px;
+  border-radius: 8px ;
+  background-color: white;
+}
 .title {
   display: flex;
   flex-direction: row;
