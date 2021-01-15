@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "antd/dist/antd.css";
 import './QuickQuote.css';
-import { Row, Col, Divider, Select, Button, Input, DatePicker } from 'antd';
+import { Row, Col, Divider, Select, Input, DatePicker } from 'antd';
 import {
   ForwardOutlined,
   FullscreenOutlined
@@ -9,28 +9,19 @@ import {
 import axios from 'axios'
 import Contact from './contactInput/Contact'
 
-function QuickQuote () {
+function QuickQuote (props) {
   const { Option } = Select;
   const style = { padding: '0px', margin: '5px 0 5px'};
   const iconstyle = { margin: '0 3px 0 0', fontSize: '1.25em' , color: '#5BBFBA'}
   const searchStyle = { margin: '0 0 0 12px'}
-  const [airports, setAirports] = useState(null);
-
-  function onChange(value) {
-    console.log(`selected ${value}`);
-  }
-
-  function onBlur() {
-    console.log('blur');
-  }
-
-  function onFocus() {
-    console.log('focus');
-  }
-
-  function onSearch(val) {
-    console.log('search:', val);
-  }
+  const [fromAirport, setFromAirport] = useState('');
+  const [destinationAirport, setDestinationAirport] = useState('');
+  const [departureDate, setDepartureDate] = useState('');
+  const [returnDate, setReturnDate] = useState('');
+  const [numberOfTravellers, setNumberOfTravellers] = useState('');
+  const [name, setName] = useState('');
+  const [transportation, setTransportation] = useState('');
+  const { airports, setAirports, setQuotes } = props; 
 
   const getAirports = () => {
     axios.get('airports')
@@ -81,10 +72,7 @@ function QuickQuote () {
             style={{ width: 200 }}
             placeholder="FROM"
             optionFilterProp="children"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
+            onChange={event => setFromAirport(event)}
             filterOption={(input, option) =>
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
@@ -98,10 +86,7 @@ function QuickQuote () {
             style={{ width: 200 }}
             placeholder="DESTINATION"
             optionFilterProp="children"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
+            onChange={event => setDestinationAirport(event)}
             filterOption={(input, option) =>
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
@@ -112,15 +97,15 @@ function QuickQuote () {
       </Row>
       <Row gutter={[42, 24]}>
         <Col span={10} style={searchStyle}>
-          <DatePicker placeholder="DEPARTURE DATE" style={{ height:50 , width: 200 }} onChange={onChange} />
+          <DatePicker placeholder="DEPARTURE DATE" style={{ height:50 , width: 200 }} onChange={event => setDepartureDate(event._d)} />
         </Col>
         <Col span={10} style={searchStyle}>
-          <DatePicker placeholder="RETURN DATE" style={{ height:50 , width: 200 }} onChange={onChange} />
+          <DatePicker placeholder="RETURN DATE" style={{ height:50 , width: 200 }} onChange={event => setReturnDate(event._d)} />
         </Col>
       </Row>
       <Row gutter={[42, 24]}>
         <Col span={10} style={searchStyle}>
-          <Input style={{ width: 200 }} placeholder="# TRAVELLERS (1, 2, etc)"/>
+          <Input onChange={event => setNumberOfTravellers(event.target.value)} style={{ width: 200 }} placeholder="# TRAVELLERS (1, 2, etc)"/>
         </Col>
         <Col span={10} style={searchStyle}>
           <Select
@@ -128,10 +113,7 @@ function QuickQuote () {
             style={{ width: 200 }}
             placeholder="TRANSPORTATION"
             optionFilterProp="children"
-            onChange={onChange}
-            onFocus={onFocus}
-            onBlur={onBlur}
-            onSearch={onSearch}
+            onChange={event => setTransportation(event)}
             filterOption={(input, option) =>
               option.children.toLowerCase().indexOf(input.toLowerCase()) >= 0
             }
@@ -145,11 +127,20 @@ function QuickQuote () {
       </Row>
       <Row gutter={[42, 24]}>
         <Col span={10} style={searchStyle}>
-          <Input style={{ width: 200 }} placeholder="NAME"/>
+          <Input onChange={event => setName(event.target.value)} style={{ width: 200 }} placeholder="NAME"/>
         </Col>
         <Col span={10} style={searchStyle}>
           <div className='quote-button'>
-            <Contact/>
+            <Contact
+              setQuotes={setQuotes}
+              fromAirport = {fromAirport}
+              destinationAirport = {destinationAirport}
+              departureDate = {departureDate}
+              returnDate = {returnDate}
+              numberOfTravellers = {numberOfTravellers}
+              name = {name}
+              transportation = {transportation}
+            />
           </div>
         </Col>
       </Row>

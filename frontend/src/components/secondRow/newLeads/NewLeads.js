@@ -31,22 +31,22 @@ function NewLeads () {
       </Row>
       <Divider style={style}/>
       <Row justify='end'>
-        <Col span={6}><img className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/women/51.jpg'/></Col>
+        <Col span={6}><img alt='' className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/women/51.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}>12:40 PM</Col>
       </Row>
       <Row justify='end'>
-        <Col span={6}><img className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/men/15.jpg'/></Col>
+        <Col span={6}><img alt='' className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/men/15.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}>12:40 PM</Col>
       </Row>
       <Row justify='end'>
-        <Col span={6}><img className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/men/11.jpg'/></Col>
+        <Col span={6}><img alt='' className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/men/11.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}>12:40 PM</Col>
       </Row>
       <Row justify='end'>
-        <Col span={6}><img className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/men/17.jpg'/></Col>
+        <Col span={6}><img alt='' className='leadsavatar' src='https://randomuser.me/api/portraits/thumb/men/17.jpg'/></Col>
         <Col span={12}>Jane Smith</Col>
         <Col span={6}>12:40 PM</Col>
       </Row>
